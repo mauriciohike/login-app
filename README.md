@@ -1,4 +1,4 @@
-# leads-app
+# login-app
 
 ## Project setup
 ```
