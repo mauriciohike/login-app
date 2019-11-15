@@ -1,24 +1,21 @@
 # login-app
+App feito em Vuejs com API mockada feita em json-server
 
-## Project setup
+## Instalação
 ```
-yarn install
+    yarn install
 ```
-
-### Compiles and hot-reloads for development
+## Inicialização
 ```
-yarn serve
+    json-server data.json -p 3333 -w
 ```
-
-### Compiles and minifies for production
 ```
-yarn build
+    yarn serve
 ```
 
-### Lints and fixes files
+## Portas
 ```
-yarn lint
-```
+8080 -> App
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+3333 -> API
+```
