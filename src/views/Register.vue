@@ -1,14 +1,47 @@
 <template>
   <Container>
     <form v-on:submit.prevent="onSubmit">
-      <input v-model="name" type="text"/>
-      <input v-model="lastname" type="text"/>
-      <input v-model="email" type="email"/>
-      <input v-model="login" type="text"/>
-      <input v-model="password" type="password"/>
-      <button type="submit">
+
+      <h1>Faça seu <strong>cadastro!</strong></h1>
+
+      <InputGroup>
+        <label for="name">
+          Nome
+        </label>
+        <input id="name" v-model="name" type="text"/>
+      </InputGroup>
+
+      <InputGroup>
+        <label for="lastname">
+          Sobrenome
+        </label>
+        <input id="lastname" v-model="lastname" type="text"/>
+      </InputGroup>
+
+      <InputGroup>
+        <label for="lastname">
+          E-mail
+        </label>
+        <input id="email" v-model="email" type="email"/>
+      </InputGroup>
+
+      <InputGroup>
+        <label for="login">
+          Login
+        </label>
+        <input id="login" v-model="login" type="text"/>
+      </InputGroup>
+
+      <InputGroup>
+            <label for="senha">
+        Senha
+      </label>
+        <input id="senha" v-model="password" type="password"/>
+      </InputGroup>
+
+      <Button>
         Cadastrar
-      </button>
+      </Button>
     </form>
   </Container>
 
@@ -18,11 +51,16 @@
 
 import { mapActions } from 'vuex';
 import Container from '../layouts/Container.vue';
+import showToast from '../mixins/Toast.js';
+import Redirect from '../mixins/Redirect.js';
+import InputGroup from '../components/InputGroup.vue';
+import Button from '../components/Button.vue';
 
 export default {
     name: "Register",
+    mixins: [showToast, Redirect],
     components:{
-        Container
+        Container, InputGroup, Button
     },
     data(){
       return{
@@ -40,33 +78,27 @@ export default {
           this.createUser({
             name: this.name, lastname: this.lastname, email: this.email, login: this.login, password: this.password
             }).then(() => {
-              this.$toasted.success('Cadastrado com sucesso!',{
-                  duration: 1000,
-                  className: ['toast', 'success'],
-                  keepOnHover: true
-              });
-                setTimeout(() =>{
-                  this.$router.push('/')
-                }, 1000)
+
+              this.showToast('Cadastrado com sucesso!', 'success');
+              this.Redirect('/', 1000);
+
             }).catch(() => {
-              this.$toasted.error('Algo deu errado!',{
-                  duration: 1000,
-                  className: ['toast', 'error'],
-                  keepOnHover: true
-              });
+
+              this.showToast('Algo deu errado...', 'error');
+
             });
         }else{
-            this.$toasted.info('Preencha todas as informações!',{
-              duration: 1000,
-              className: ['toast', 'warning'],
-              keepOnHover: true
-          });
+
+            this.showToast('Preencha todos os dados!', 'info');
+
         }
       }
     }
 }
 </script>
 
-<style>
-
+<style scoped>
+  h1{
+    font-size: 32px;
+  }
 </style>

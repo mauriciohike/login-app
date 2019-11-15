@@ -28,6 +28,7 @@ export default {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       background-color: #eaeced;
+      height: 100vh;
   }
   h1{
       font-weight: 700;
@@ -41,7 +42,7 @@ export default {
       opacity: 0;
   }
   .toast{
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-weight: 700 !important;
       padding: 15px 30px !important;
   }
@@ -51,7 +52,10 @@ export default {
   .error{
       background: #FF4C4C !important;
   }
-  .warning{
-      background: #FFAA40 !important;
+  .info{
+      background: #FF4C4C !important;
   }
+  ::selection { 
+      background: #E3E5E6;
+    }
 </style>

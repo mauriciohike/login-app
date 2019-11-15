@@ -27,13 +27,13 @@ export default {
         width: 95%;
         max-width: 1200px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         margin: 0 auto;
         height: 100vh;
     }
     .default-illustration{
-        max-width: 600px;
+        width: 49%;
     }
     .default-illustration svg{
         max-width: 100%;

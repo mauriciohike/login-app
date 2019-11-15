@@ -1,37 +1,28 @@
 {
   "users": [
     {
+      "name": "Mauricio",
+      "lastname": "Vieira",
+      "email": "mauriciorenanvs@gmail.com",
+      "login": "mauricio40",
+      "password": "123",
       "id": 1
     },
     {
+      "name": "Karina",
+      "lastname": "Carvalho",
+      "email": "karinacarvalho@gmail.com",
+      "login": "karina94",
+      "password": "12345",
       "id": 2
     },
     {
+      "name": "Carlos",
+      "lastname": "dos Santos",
+      "email": "carlossantos@gmail.com",
+      "login": "carlosjesus",
+      "password": "12345678",
       "id": 3
-    },
-    {
-      "name": "Mauricio",
-      "lastname": "Mauricio",
-      "email": "Mauricio@gmail.com",
-      "login": "Mauricio",
-      "password": "123",
-      "id": 4
-    },
-    {
-      "name": "Mauricio",
-      "lastname": "Mauricio",
-      "email": "Mauricio@sdasda.com",
-      "login": "Mauricio",
-      "password": "11",
-      "id": 5
-    },
-    {
-      "name": "Bruno",
-      "lastname": "Brunin",
-      "email": "bruno@gmail.com",
-      "login": "brunnnno",
-      "password": "123",
-      "id": 6
     }
   ]
 }
