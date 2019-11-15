@@ -7,7 +7,7 @@ App feito em Vuejs com API mockada feita em json-server
 ```
 ## Inicialização
 ```
-    json-server data.json -p 3333 -w
+    json-server data.json -p 3000 -w
 ```
 ```
     yarn serve
@@ -17,5 +17,5 @@ App feito em Vuejs com API mockada feita em json-server
 ```
 8080 -> App
 
-3333 -> API
+3000 -> API
 ```
