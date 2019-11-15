@@ -8,8 +8,7 @@ App feito em Vuejs com API mockada feita em json-server
 ## Inicialização
 ```
     json-server data.json -p 3000 -w
-```
-```
+
     yarn serve
 ```
 
