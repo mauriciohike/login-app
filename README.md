@@ -1,4 +1,4 @@
-# login-app
+# Addor
 App feito em Vuejs com API mockada feita em json-server
 
 ## Instalação
